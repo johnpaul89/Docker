@@ -1,0 +1,29 @@
+{% load bootstrap4 %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    {% block styles %}
+    {% bootstrap_css %}
+    {% endblock %}
+
+</head>
+<body>
+    <h1 class="text-center">Get to see docker tests in work.</h1>
+    <div class="container">
+    <a href=" {% url 'welcome' %} ">
+    <button type="button" class="btn-lg btn btn-warning">App1</button></a>
+    <a href=" {% url 'second' %} ">
+    <button type="button" class="btn-lg btn btn-danger">App2</button></a>
+    </div>
+
+    {% block scripts %}
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     {% bootstrap_javascript %}
+    {% endblock %}
+
+</body>
+</html>
